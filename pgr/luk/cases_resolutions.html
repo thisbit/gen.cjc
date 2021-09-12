@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style type="text/css">
+/* 	all code by Nick Montfort @ MIT, Digital Media & Literature	 */
+body {
+ background: #fff;
+ color: #000;
+ margin: 24pt;
+ font-size: 16pt;
+ font-family: Arial, sans-serif;
+ letter-spacing: .02ex;
+ line-height:1.4em;	
+}
+div {
+ margin-bottom: 1em;
+ font-family: Arial, sans-serif;;
+}
+h1 {
+ margin-bottom: 1em;
+ font-family: Arial, sans-serif;
+ font-size:1.2em;
+
+}
+a {
+ color: #fff;
+ text-decoration: none;
+}
+#main {
+ font-family: serif;
+}
+</style>
+<script type="text/javascript">
+var n = 1;
+function rand_range(maximum) {
+    "use strict";
+    return Math.floor(Math.random() * (maximum + 1));
+}
+function choose(array) {
+    "use strict";
+    return array[rand_range(array.length - 1)];
+}
+function stanza() {
+    "use strict";
+    var place = choose([
+    'over the counter',
+	'over the toxic chemical substances',
+	'at a land border',
+	'at a meeting of directors',
+	'at a port of entry',
+	'at a Danish port',
+	'at a place or time for purchase',
+	
+	'on a canadian stock exchange',
+	'on a taxi',
+	'on a tribunal',
+	'on a race track',
+	'on a border crossing',
+	
+	'inside and outside the territory',
+	'inside the same factory',
+	
+	'outside any other member state',
+	'outside a group',
+	'outside the authority',
+	'outside the border',
+	'outside the channels of commerce',
+	'outside the EU',
+	'outside the territory of the party',
+	
+	'in a member state',
+	'in a jurisdiction of Canada',
+	'in an an area',
+	'in an enterprise',
+	'in an annex',
+	'in a NY event',
+	'in a dispute',
+	'in a financial institution',
+	'in a foreign country',
+	'in a government casino',
+	'in a manufacturing facility',
+	'in a market outise the territory',
+	'in a motion picture exhibition facility',
+	'in a farmacy under the supervision',
+	
+	'on the ancient and historical monument',
+	'on the market',
+	'on the bar',
+	'on the croatian territory',
+	'on the Danube river',
+	'on the hungarian and veterinary chamber',
+	'on the inland waterways of Bulgaria',
+	'on the line between Stockholm city and foreigh territories',
+	'on the UK continental shelf',
+	'in a food court'
+	]),
+	
+	
+        object = choose(['typical ', 'rare ', 'large ', 'high quality ', 'non-standard ']) + choose([
+    'brazil nut',
+	'chestnut',
+	'coconut',
+	'hazelnut',
+	'walnut',
+	'jackfruit',
+	'citrus fruit',
+	'mango',
+	'nectarine',
+	'starch',
+	'wheat packaging',
+	'gluten',
+	'cornflake',
+	'sweet corn',
+	'cereal',
+	'potato',
+	'mushroom',
+	'tomato',
+	'sweet pepper',
+	'pine apple',
+	'bovine boneless crop',
+	'bovine animals, fresh or chilled',
+	'frozen bovine cut',
+	'separated bovine forequarter',
+	'infectious bovine rhinotracheitis',
+	'frozen bovine carcass',
+	'chilled bovine cut',
+	'Saskatchewan Chicken Marketing Plan',
+	'Manitoba Chicken Broiler',
+	'veal or pork for pork import',
+	'pork tariff rate quota',
+	'tone of pork',
+	'historical importer',
+	'veal',
+	'chuck and blade and brisket cut',
+	'crop spraying',
+	'vegetable fat and oil',
+	'fibre',
+	'processed vegetable product'
+	]),
+	
+	
+	
+        activity = choose([
+    'proceeding',
+    'debate',
+    'an argument',
+	'a negotiation',
+	'a legal procedure',
+	'an agreement',
+	'a disagreement',
+	'a miscommunication',
+	'a discussion',]),
+	
+	
+        traits = choose([
+    'reputation',
+	'quota',
+	'rationale',
+	'terms',
+	'price',
+	'techniques',
+	'format',
+	'accessibility',
+	'cost',
+	'boundary conditions',
+	'trajectory',
+	'condition',
+	'scale',
+	'compliance',
+	'characteristics',
+	'convinience',
+	'standard',
+	'dimensions',
+	'quantity',
+	'marketability']),
+        
+        // more options needed bellow
+        result = [
+    'negotiation and conclusion',
+	'proceeding',
+	'an agreement',
+	'further exploration',
+	'further regulation',
+	'supporting documents',
+	'the implementation',
+	'start of the mediation',
+	'regulatory cooperation',
+	'commercial relationship',
+	'regulation of the project',
+	'a return deadline',
+	'a different hypothesis',
+	'a threat to quit',
+	'laughter'
+	],
+	
+        main = document.getElementById('main'),
+        last = document.createElement('div'),
+        first,
+        second;
+    first = choose(result);
+    result.splice(result.indexOf(first, 1));
+    second = choose(result);
+    last.innerHTML = activity + " " + place +
+        '<br />&nbsp; on a ' + object +
+        "<br />&nbsp;&nbsp;&nbsp; involving " + activity +
+        " about the product's " + traits +
+        '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resulting in ' + first +
+        ' and ' + second;
+    main.appendChild(last);
+    n = n + 1;
+    if (n < 57) {
+        stanza();
+    }
+}
+</script>
+  <title>Cases and Resolutions</title>
+</head>
+<body onload="stanza();">
+<div id="main">
+<h1>Cases and Resolutions</h1>
+</div>
+</body>
+</html>

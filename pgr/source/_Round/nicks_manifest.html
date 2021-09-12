@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0041)http://round.newbinarypress.com/note.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style type="text/css">
+/* <![CDATA[ */
+body {
+ background: #eee;
+ color: #113;
+ margin: 24pt;
+ font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+ font-size: 13pt;
+}
+div {
+ margin-bottom: 13pt;
+}
+a {ubun
+ color: #117;
+ text-decoration: none;
+}
+/* ]]> */
+</style>
+  <title>A Note on Round</title>
+</head>
+<body><div id="main">
+<p style="text-align: center; font-style: italic">A Note on <a href="http://round.newbinarypress.com/index.html" title="Round">Round</a></p>
+<p><em>Round</em> is a computational poem that is both non-interactive and deterministic. It is computational in that computation is an essential aspect of the work, non-interactive because there is no input accepted as the program runs, and deterministic because the text produced should be the same each time on any properly-functioning computer. The poem is also infinite (in the sense of boundless); there is no final line or internally specified condition that will cause the program will stop. <em>Round</em> is not never-ending, since whatever computational resources one has will eventually be exhausted, but there is no pre-set length to the poem.</p>
+<p>The poem is assembled out of ten fragments, one of which is a newline (line break). The other nine are strings of legible text. <em>Round</em> computes the digits of π, pausing after each digit is computed. (Each time <em>Round</em> is loaded, it begins at 3, continues to 1, continues to 4, and so on.) For each digit computed, the fragment corresponding to that digit is added to the poem. If the fragment selected is a line break, <em>Round</em> begins a new line. There are eight words in the text that are common, eight more that are prefixed with “in” and occur less frequently, and, more rarely than that, neologisms that begin with more than one occurrence of “in.”</p>
+<p>As <em>Round</em> runs, the production of text will slow down as more and more steps are necessary to determine the next digit of π. Your computer will also slow down on other tasks and will physically heat up. Your computer’s fan will work harder as your processor labors to complete these computations.</p>
+<p>Computation is done according to Jeremy Gibbons, “Unbounded Spigot Algorithms for the Digits of π,” <i>American Mathematical Monthly,</i> 113 (4): 318–328, 2006. My thanks to those who have conduced similar explorations of π (the painters François Morellet and Katie Gilligan) and those who have defined text fragments to correspond to individual symbols as a way of expanding sequences (the artist/writers Emmett Williams and Paul Chan).</p>
+<p>Although <em>Round</em> is itself non-interactive, there are opportunities to interact at a higher level. Those curious about how <em>Round</em> works are encouraged to “view source.” More than that, everyone is welcome to save the page (along with the requisite <tt><a href="http://round.newbinarypress.com/jsbn.js" target="_blank">jsbn.js</a></tt> and <tt><a href="http://round.newbinarypress.com/jsbn2.js" target="_blank">jsbn2.js</a></tt> files, written by Tom Wu and required for the large-integer arithmetic that <em>Round</em> performs) and make changes to it by, for instance, placing different strings in the <tt>fragment</tt> array. Or, the program can be considerably simplified by using pseudo-random digits or some other digit sequence that is less complex and costly to compute. As is the case with all of my efforts at creative computing (whether explicitly stated in a license or implicit in brief programs), anyone may modify the program and poem — for amusement, to create new poetic or aesthetic work in a similar or different vein, for any other reason, or for no reason.</p>
+<p style="text-align:center;"><em>Round</em> is published by <a href="http://newbinarypress.com/" title="New Binary Press" target="_blank">New Binary Press</a></p>
+<p style="text-align:center;"><img src="./note_files/New Binary Press.png" width="72" height="72" alt="New Binary Press"></p>
+<p style="text-align: center; font-style: italics"><a href="http://nickm.com/" title="Nick Montfort&#39;s Personal Website" target="_blank">—Nick Montfort</a> · <a href="http://round.newbinarypress.com/index.html" title="Round">run &amp; read the poem</a></p>
+</div>
+
+
+</body></html>

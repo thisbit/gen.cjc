@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0058)http://collection.eliterature.org/3/works/speeches/en.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="./en_files/css" rel="stylesheet" type="text/css">
+<link href="./en_files/style.css" rel="stylesheet">
+<style type="text/css">
+/* <![CDATA[ */
+body {
+ background: #fff;
+ color: #000;
+ margin: 0;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 15pt;
+}
+h1, h2 {
+ margin: 0;
+}
+div#main div {
+line-height: 1.6em;
+ float:left;
+ display: inline;
+}
+a {
+ color: #117;
+ text-decoration: none;
+}
+/* ]]> */
+</style>
+<script type="text/javascript">
+
+var first = [
+"Exporting Party’s zoning decision is ", 
+"A competent authority of a Party means ", 
+"The importing Party may request "
+];
+
+
+var second = [
+"one of a small number of goods. ",
+"to supply a good or service. ",
+"the amount budgeted for the subsidy. "
+];
+
+var third = [
+"The importing Party is satisfied ", 
+"A Party shall notify the other Party, in writing, of  ", 
+"The Parties endeavour to exchange information, " 
+
+
+];
+
+var fourth = [
+"a fundamental pillar of sustainable development!",
+"an investment in its territory.", 
+"reducing levels of protection afforded in their environmental law."
+
+];
+
+function zero_through_nine() {
+    "use strict";
+    return Math.floor(Math.random() * 3); //tu sam mijenjala 3 je bio 10
+}
+
+function speech() {
+    "use strict";
+    var last, text, i, main = document.getElementById('main');
+    last = document.createElement('div');
+    text = ''
+    last.appendChild(document.createTextNode(text));
+    main.appendChild(last);
+    for(i = 0; i < 3; i++){ //tu sam mijenjala 3 je bio 10
+        last = document.createElement('div');
+        text = '' + first[zero_through_nine()]
+        text += second[zero_through_nine()]
+        text += third[zero_through_nine()]
+        text += fourth[zero_through_nine()]
+        if(i == 9){
+            text += ''
+        }
+        last.appendChild(document.createTextNode(text));
+        main.appendChild(last);
+    }
+}
+
+</script>
+  <title>Speeches</title>
+</head>
+<body onload="speech();">
+<div id="main"></div>
+
+<!-- <a href="javascript:location.reload()" class="r" title="Reload">↺</a> -->
+
+
+
+</body></html>

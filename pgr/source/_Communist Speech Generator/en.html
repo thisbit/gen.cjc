@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0058)http://collection.eliterature.org/3/works/speeches/en.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="./en_files/css" rel="stylesheet" type="text/css">
+<link href="./en_files/style.css" rel="stylesheet">
+<style type="text/css">
+/* <![CDATA[ */
+body {
+ background: #fff;
+ color: #000;
+ margin: 0;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 15pt;
+}
+h1, h2 {
+ margin: 0;
+}
+div#main div {
+ margin: 12pt;
+ padding-left: 12pt;
+}
+a {
+ color: #117;
+ text-decoration: none;
+}
+/* ]]> */
+</style>
+<script type="text/javascript">
+
+var first = [
+"Comrade ladies and gentlemen, ",
+"50 years of arduous struggle, ",
+"When we reject the deviation of the previous government, ",
+"Only arduous work or ",
+"We should also remember that ",
+"As Comrade Yesman said, ",
+"We are convinced that ",
+"Observing, as we note, that ",
+"Contrary to the snide rumors from the right, ",
+"In spite of the obvious difficulties, "
+];
+
+var second = [
+"the implementation of the tasks outlined in our program ",
+"the generosity and commitment of activists ",
+"our consolidation in the fight against the so-called right-wing ",
+"a steady increase in the numbers and activity of our membership ",
+"work, along with law and order, ",
+"the resolution made at our last plenary session ",
+"reflecting on Lenin’s timeless thoughts, Soviet comrades, ",
+"the eradication of certain ingrained habits ",
+"surmounting the economic difficulties we inherited from our predecessors ",
+"strengthening the role of our Party cells "
+];
+
+var third = [
+"obliges us to consider ",
+"compels our predecessors to either bury their heads in the sand or support ",
+"is a core necessity for the full accomplishment of ",
+"plays an essential role in shaping ",
+"helps to solve the swelling problems of ",
+"presents an interesting test in the evolution of ",
+"supports us in the preparation and implementation of ",
+"requires vigilance and propaganda on the topic of ",
+"requires an understanding of circumstances arising out of ",
+"appears to enable the advancement of "
+];
+
+var fourth = [
+"the existing administrative and economic conditions.",
+"our productivity and the organization of production.",
+"the rights of the members of our Committee.",
+"the process of international detente.",
+"the attitudes of comrades towards Party goals.",
+"our true, ultimate objective.",
+"the system of axioms which is the chicken in every pot.",
+"the proper method of privatization.",
+"the direction of a progressive upbringing.",
+"the necessary advance of the party leadership and the government.",
+"Amen"
+];
+
+function zero_through_nine() {
+    "use strict";
+    return Math.floor(Math.random() * 10);
+}
+
+function speech() {
+    "use strict";
+    var last, text, i, main = document.getElementById('main');
+    last = document.createElement('div');
+    text = '“Comrade ladies and gentlemen!'
+    last.appendChild(document.createTextNode(text));
+    main.appendChild(last);
+    for(i = 0; i < 10; i++){
+        last = document.createElement('div');
+        text = '“' + first[zero_through_nine()]
+        text += second[zero_through_nine()]
+        text += third[zero_through_nine()]
+        text += fourth[zero_through_nine()]
+        if(i == 9){
+            text += '”'
+        }
+        last.appendChild(document.createTextNode(text));
+        main.appendChild(last);
+    }
+}
+
+</script>
+  <title>Speeches</title>
+</head>
+<body onload="speech();">
+
+<div class="b">
+  <a href="javascript:location.reload()">Reload</a>
+</div>
+<div class="b">
+  <a href="http://collection.eliterature.org/3/works/speeches/pl.html">Polski</a>
+</div>
+
+<div class="h">
+	<span class="t"><b>Speeches</b> by <b>Marek Pampuch</b></span>,
+	translated by Nick Montfort and Piotr Marecki
+</div>
+
+<div id="main"><div>“Comrade ladies and gentlemen!</div><div>“50 years of arduous struggle, the implementation of the tasks outlined in our program requires an understanding of circumstances arising out of the necessary advance of the party leadership and the government.</div><div>“We should also remember that the implementation of the tasks outlined in our program obliges us to consider the attitudes of comrades towards Party goals.</div><div>“We should also remember that surmounting the economic difficulties we inherited from our predecessors is a core necessity for the full accomplishment of the direction of a progressive upbringing.</div><div>“Observing, as we note, that strengthening the role of our Party cells appears to enable the advancement of the system of axioms which is the chicken in every pot.</div><div>“50 years of arduous struggle, our consolidation in the fight against the so-called right-wing requires vigilance and propaganda on the topic of our productivity and the organization of production.</div><div>“Comrade ladies and gentlemen, strengthening the role of our Party cells obliges us to consider the direction of a progressive upbringing.</div><div>“Observing, as we note, that reflecting on Lenin’s timeless thoughts, Soviet comrades, plays an essential role in shaping the system of axioms which is the chicken in every pot.</div><div>“We should also remember that the generosity and commitment of activists appears to enable the advancement of our true, ultimate objective.</div><div>“As Comrade Yesman said, surmounting the economic difficulties we inherited from our predecessors helps to solve the swelling problems of our productivity and the organization of production.</div><div>“We are convinced that a steady increase in the numbers and activity of our membership obliges us to consider the attitudes of comrades towards Party goals.”</div></div>
+
+<a href="javascript:location.reload()" class="r" title="Reload">↺</a>
+
+
+
+</body></html>

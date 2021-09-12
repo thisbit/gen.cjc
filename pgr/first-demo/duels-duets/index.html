@@ -1,0 +1,110 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!--
+
+Duels — Duets
+copyright (c) 2013 Stephanie Strickland & Nick Montfort
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. -->
+<style type="text/css">
+/* <![CDATA[ */
+body {
+ background: #fff;
+ color: #000;
+ margin: 24pt;
+ font-size: 16pt;
+ font-family:arial, sans-serif;
+}
+div {
+ margin-bottom: 2em;
+ font-family:arial, sans-serif;
+ line-height: 1.4em;
+}
+h1 {
+ font-family:arial, sans-serif;
+ font-size: 1.4em;
+ margin-bottom: 1em;
+}
+a {
+ color: #fff;
+ text-decoration: none;
+}
+#main {
+ font-family: serif;
+}
+/* ]]> */
+</style>
+<script type="text/javascript">
+var n = 1;
+function rand_range(maximum) {
+    "use strict";
+    return Math.floor(Math.random() * (maximum + 1));
+}
+function choose(array) {
+    "use strict";
+    return array[rand_range(array.length - 1)];
+}
+function stanza() {
+    "use strict";
+    var place = choose(['Food quality', 'standards', 'consumer', 'protection',
+    'regulations', 'Investment Court System', 'Settlement',
+    'Trans-Atlantic Trade and Investment Partnership', 'agriculture', 'Certification',
+    'assessment', 'organic', 'in a food court']),
+        art = choose(['', 'Investment ']) + choose(['food labels',
+    'small-scale production', 'agribusiness',
+    'chicken meat', 'environment', 'environmentally friendly packaging',
+    'Hazard Analysis Critical Control Points', 'Promotion and lobbying']),
+        interaction = choose(['expenditure', 'Agricultural output',
+    'income', 'an agreement', 'Labour force',
+    'Predominantly Rural Regions', 'Per capita']),
+        traits = choose(['Food programmes', 'Sugar', 'Olive oil', 'Textile plants', 'Fruit and vegetables',
+    'mood', 'techniques', 'format', 'accessibility', 'poetics',
+    'Wine sector', 'Beef and veal', 'Fertilisers and soil improvers', 'Industrial crops',
+    'sectors of the economy', 'Beverages', 'Non edible']),
+        result = ['holdings', 'Structure', 'livestock',
+    'Biocontrole', 'Control Authority', 'implementation and administration',
+    'running out of time', 'organic rules in the primary sector', 'inspects',
+    'certification', 'organisation',
+    'assigned', 'Ministry of Economic Affairs'],
+        main = document.getElementById('main'),
+        last = document.createElement('div'),
+        first,
+        second;
+    first = choose(result);
+    result.splice(result.indexOf(first, 1));
+    second = choose(result);
+    last.innerHTML = '' + place +
+        '<br />&nbsp; on a ' + art +
+        "<br />&nbsp;&nbsp;&nbsp;  " + interaction +
+        " about the work's " + traits +
+        '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' + first +
+        '  ' + second;
+    main.appendChild(last);
+    n = n + 1;
+    if (n < 90) { // set number of lines
+        stanza();
+    }
+}
+</script>
+  <title>Consuming Policy – Ingesting Regulation</title>
+</head>
+<body onload="stanza();">
+<div id="main">
+	<h1>Consuming Policy – Ingesting Regulation</h1>
+</div>
+</body>
+</html>

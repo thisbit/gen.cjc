@@ -1,0 +1,50 @@
+#!/usr/bin/env python
+
+# Duels -- Duets
+# copyright (c) 2013 Stephanie Strickland & Nick Montfort
+#
+# Permission to use, copy, modify, and/or distribute this software for
+# any purpose with or without fee is hereby granted, provided that the
+# above copyright notice and this permission notice appear in all
+# copies.
+#
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+# WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
+# WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
+# AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+# DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+# PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+# TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+# PERFORMANCE OF THIS SOFTWARE.
+
+from random import choice
+
+print
+for i in range(12):
+    place = choice(['Food quality', 'standards', 'consumer', 'protection',
+    'regulations', 'Investment Court System', 'Settlement',
+    'Trans-Atlantic Trade and Investment Partnership', 'agriculture', 'Certification',
+    'assessment', 'organic', 'in a food court'])
+    art = choice(['', 'computational ']) + choice(['food labels',
+    'small-scale production', 'agribusiness',
+    'chicken meat', 'environment', 'environmentally friendly packaging',
+    'Hazard Analysis Critical Control Points)', 'Promotion and lobbying'])
+    interaction = choice(['expenditure', 'Agricultural output',
+    'income', 'an agreement', 'Labour force',
+    'Predominantly Rural Regions', 'Per capita'])
+    traits = choice(['Food programmes', 'Sugar', 'Olive oil', 'Textile plants', 'Fruit and vegetables',
+    'mood', 'techniques', 'format', 'accessibility', 'poetics',
+    'Wine sector', 'Beef and veal', 'Fertilisers and soil improvers', 'Industrial crops',
+    'sectors of the economy', 'Beverages', 'Non edible'])
+    result = ['holdings', 'Structure', 'livestock',
+    'Biocontrole', 'Control Authority', 'implementation and administration',
+    'running out of time', 'organic rules in the primary sector', 'inspects',
+    'certification', 'organisation',
+    'assigned', 'Ministry of Economic Affairs']
+    first = choice(result)
+    result.remove(first)
+    second = choice(result)
+    print 'a collaboration beginning ' + place
+    print '  on a ' + art
+    print '    involving ' + interaction + " about the work's " + traits
+    print '      resulting in ' + first + ' and ' + second + '\n'

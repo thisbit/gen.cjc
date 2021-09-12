@@ -1,0 +1,47 @@
+// 1 + 1 = 3, first line states about first subject, second about second, third makes a concussion
+
+// first verse (fixed)
+beginning:
+	'The police officer nears the alleged perpetrator.'
+	'The shopper looks at the cashier.'
+	'The babysitter approaches the child.'
+	'The student knocks on the teacher's door.'
+	'The indigent turns to the librarian.'
+	'The driver calls to the pedestrian.'
+	'The rescuer locates the survivalist.'
+
+// combines next three into a middle verse
+verb:
+	'berates'
+	'begs'
+	'confesses to'
+	'asks for advice from'
+	'seeks help from'
+	'expresses sympathy to'
+	'smacks'
+	'defies'
+	'surrenders to'
+	'hugs'
+	
+heshe:
+	'He'
+	'She'
+
+herhim:
+	'her'
+	'him'
+
+
+// last verse (fixed)
+end:
+	'They feel better after a good cry.'
+	'They pray together.'
+	'They wait in silence.'
+	'They break into laughter.'
+	'Rude gesture meets rude gesture.'
+	'One ends up with a broken will.'
+	'Six years later, neither one remembers the incident.'
+	'The more powerful one triumphs.'
+	'The underdog ends up on top.'
+	'Each one learns something.'
+
