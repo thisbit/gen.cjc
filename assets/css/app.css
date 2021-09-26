@@ -1,47 +1,122 @@
 body {
 	margin: 0;
 	padding: 0;
+	background: linear-gradient(to bottom right, lime, lightblue) 50% 50% / 100%
+		100% no-repeat;
 }
 .bug-playground {
 	height: 100vh;
 	width: 100vw;
-	background: #ccc;
+	/* background: #ccc; */
 }
 
-article {
+.bug {
 	position: fixed;
 	width: 50px;
 	height: 50px;
 	border-radius: 25px;
 }
 
-.bug-1 {
+.bug.a {
 	background-color: red;
 	top: 100px;
 	right: 100px;
 }
-.bug-2 {
+.bug.b {
 	background-color: blue;
 	top: 10px;
 	left: 10px;
 }
-.bug-3 {
+.bug.c {
 	background-color: green;
 	bottom: 200px;
 	left: 100px;
 }
 
-.bug-4 {
+.bug.d {
 	background-color: black;
 	top: 50px;
 	left: 100px;
 }
 
-.app-header {
+/* .app-header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 200px;
 	background: transparent;
+} */
+
+/* TYPOGRAPHY */
+@font-face {
+	font-family: "inter";
+	src: url("../fonts/inter.eot");
+	src: url("../fonts/inter.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/inter.woff") format("woff"),
+		url("../fonts/inter.ttf") format("truetype"),
+		url("../fonts/inter.svg#inter") format("svg");
+}
+.app {
+	font-family: Arial, "inter";
+	overflow-y: hidden;
+}
+
+.app-header {
+	text-transform: uppercase;
+	line-height: 1;
+	font-weight: 900;
+	max-width: 120vw;
+	height: 8.5vh;
+	white-space: nowrap;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	z-index: 3;
+	transform: translateX(-10vw) translateY(10vh) rotate(-23deg);
+}
+
+.app-heading {
+	font-size: 8vh;
+	display: inline-block;
+	padding-left: 100%;
+	animation: marquee 50s linear infinite;
+	text-transform: uppercase;
+	margin-block-end: 0;
+	margin-block-start: 0;
+	margin-bottom: 0;
+	height: 100%;
+	color: #fff;
+	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+		2px 2px 0 #000;
+}
+
+@supports ((text-stroke: 2px black) or (-webkit-text-stroke: 2px black)) {
+	.app-heading {
+		color: transparent !important;
+		-webkit-text-stroke: 2px black;
+		text-stroke: 2px black;
+		text-shadow: none;
+	}
+}
+
+@keyframes marquee {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-100%, 0);
+	}
+}
+
+.app-conent {
+	margin: 1em;
+}
+.poem {
+	position: absolute;
+	width: calc(100vw - 3em);
+	bottom: 0;
+}
+
+.line {
+	font-size: 1.2em;
 }
