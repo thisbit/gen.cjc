@@ -1,0 +1,69 @@
+// song describing the expirience of a place
+ we could use this one to talk about the a kind of ambience of law & regulations ... imagine it as a place
+
+//begining of verse (noun)
+above:
+	brow
+	mist
+	shape
+	layer
+	the crag
+	stone
+	forest
+	height
+	
+// ending of verse	(noun)
+below:
+	flow
+	basin
+	shape
+	vein
+	rippling
+	stone
+	cove
+	rock
+
+// middle of verse (verb)
+trans:
+	command
+	pace
+	roam
+	trail
+	frame
+	sweep
+	exercise
+	range
+
+// middle of verse (verb)
+imper:
+	linger
+	dwell
+	rest
+	relax
+	hold
+	dream
+	hum
+
+// never saw it appear
+texture:
+	rough
+	fine
+
+// appears in the single versa stanza (adjective)
+adjs:
+	encompassing
+	sinuous
+	straight
+	objective
+	arched
+	cool
+	clear
+	dim
+	driven
+
+// these are part of the function bellow, and serve as conditions & connectors
+words:
+	forest
+	monkeys
+	the
+	s

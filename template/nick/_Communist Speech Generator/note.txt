@@ -1,0 +1,22 @@
+// if we want to generate a speech, this can do that
+(we can put parts of sentences, unlimited number of lines, with which to start, continue, and end the sentence in the following order)
+
+first:
+	"Comrade ladies and gentlemen, "
+	"50 years of arduous struggle, "
+	"When we reject the deviation of the previous government, "
+
+second:
+	"the implementation of the tasks outlined in our program "
+	"the generosity and commitment of activists "
+	"our consolidation in the fight against the so-called right-wing "
+
+third:
+	"obliges us to consider "
+	"compels our predecessors to either bury their heads in the sand or support "
+	"is a core necessity for the full accomplishment of "
+
+fourth:
+	"the existing administrative and economic conditions."
+	"our productivity and the organization of production."
+	"the rights of the members of our Committee."

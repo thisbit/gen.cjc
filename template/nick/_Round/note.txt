@@ -1,0 +1,15 @@
+// This poem generates poems by computing the number π (PI), nine values are assigned to each digit of π (PI), therefore the number of words is limited, but the combinations are varied and basically infinite
+
+values:
+	'in'
+	'crease '
+	'form '
+	'tends '
+	'tense '
+	'to '
+	'tone '
+	'vent '
+	'verse '
+	
+// this is a rather rhythmical poem, then narrative
+// also as we can see here the chosen words are almost about some physical strain, tends, tense, vent ... maybe this can somehow give us an idea of what kind of words might be good, words linked to sound maybe, to industry ... digestion ... smtn

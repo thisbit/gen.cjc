@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style type="text/css">
+/* 	all code by Nick Montfort @ MIT, Digital Media & Literature	 */
+body {
+	letter-spacing:.02em;
+  margin:20px;
+  font-family:arial, sans-serif;
+  font-size:20px; }
+div {height:1.8em; }
+h1 {
+font-size: 1.2em;margin-bottom:1em;}
+</style>
+<script type="text/javascript">
+"use strict";
+var t = 4;
+var all = '';
+var words = [
+	'assessed',
+	'aproved',
+	'authorized',
+	'approver',
+	'advancer',
+	'bidder',
+	'classified',
+	'consumer',
+	'computer',
+	'carrier',	
+	'distiller',
+	'exceeder',
+	'establisher',
+	'examiner',
+	'former',
+	'harmonizer',
+	'immobilizer',
+	'insurer',
+	'infringer',
+	'measurer',
+	'manager',
+	'ownes',
+	'processed',
+	'produces',
+	'provider',
+	'purchases',
+	'receiver',
+	'restored',
+	'specialised',
+	'specifies',
+	'supplies',
+	'treasurer'
+	];
+function choose(array) {
+  return array[Math.floor(Math.random() * array.length)];
+  }
+function reduce(date) {
+  var word = choose(words);
+  if (date.getYear() % 2) { return word.substring(0, word.length - 1); }
+  return word.substring(1, word.length);
+  }
+function line() {
+  var main = document.getElementById('main');
+  var date = new Date();
+  var next = document.createElement('div');
+  if (t <= 9999) { t += 1; } // number of lines at a time
+    else { main.removeChild(document.getElementById('main').firstChild); }
+  if (date.getYear() % 2 === 0) { next.style.marginLeft = '75%'; }
+  if (Math.random() < 0.2 && all !== '') { all = ''; }
+    else {
+      all = choose([
+      'he ', 
+      'she ', 
+      'it '
+      
+      
+      ]) + reduce(date) + 's '
+      all += reduce(date) + choose(['d ', 'r ']);
+      if (Math.random() < 0.333) {
+        all = choose([
+        'their ',
+		'his ',
+        'its '        
+        
+        ]);
+        all += reduce(date) + choose(['r ', 'd ']) + reduce(date) + 'r ';
+        }
+      if (Math.random() < 0.333) {
+        all = choose(['near ', 'from ', 'further from ', 'under ', 'to ', 'on ']);
+        all += choose([' the ', ' this ', ' that '])+reduce(date)+'s ';
+        }
+      }
+  next.appendChild(document.createTextNode(all));
+  main.appendChild(next);
+  }
+</script>
+<title>A song about complex daily operations, divided to managable steps and assigned to responsible persons</title>
+</head>
+<body onload="line(); setInterval(line, 1000);"> <!-- set the speed here-->
+  <div id="main">
+  <h1>A song about complex daily operations, divided to managable steps and assigned to responsible persons</h1>
+  </div>
+</body>
+</html>

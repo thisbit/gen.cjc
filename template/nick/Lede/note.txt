@@ -1,0 +1,97 @@
+// while something
+something happened
+absurd combination
+(this is a structure of generated sentences)
+
+// while situations
+absurd_situation:
+	"sitting on the toilet"
+	"being strip-searched in the airport"
+	"failing to hail a cab"
+	"renting formal clothes"
+	"stepping over a street pizza"
+	"double-parking"
+	"entering a convenience store"
+	"watching happy-slapping videos online"
+	"selecting produce"
+	"burning trash"
+	"buying lottery tickets"
+
+// description of subject
+sad_descriptor:
+	"a jobless"
+	"a forlorn"
+	"a clumsy"
+	"an antisocial"
+	"a fretful"
+	"a hirsute"
+	"an unstylish"
+	"a cockeyed"
+	"an overly trusting"
+	"an almost illiterate"
+	"a big-boned"
+	
+// subject's nationality (added decriptor)
+nationality:
+	"Scottish"
+	"Thai"
+	"Romani"
+	"Icelandic"
+	"Belizian"
+	"Belgian"
+	"Welsh"
+	"Salvadoran"
+	"Canadian"
+	"Turkish"
+	"Armenian"
+	"Micronesian"
+
+// another added descriptor
+man_or_woman:
+	"man"
+	"woman"
+	"teenager"
+	"senior citizen"
+	
+// while previous is happening a subject turnes into following
+silly_character:
+	"a giraffe"
+	"a robot"
+	"a carnivorous plant"
+	"a Deadhead"
+	"a ninja"
+	"Professor Snape"
+	"a turnip"
+	"a skyscraper"
+	"Benjamin Franklin"
+	"a microbe"
+	"a pirate king"
+
+// actions happening while previous
+interact_with:
+	"do good deeds for"
+	"interrogate"
+	"evangelize"
+	"wink at"
+	"dance for"
+	"serenade"
+	"vigorously encourage"
+	"wave to"
+	"pray with"
+	"handle snakes with"
+	"soothe"
+	"laugh at"
+	"imitate"
+	
+
+// this ia a binding function, puts together the abovelisted, connecting them with words like while, had an idea, etc.
+lede:
+	"While " +
+	absurd_situation +
+	sad_descriptor +
+	nationality +
+	man_or_woman +
+	had an idea: Why not dress as +
+	silly_character +
+	interact_with +
+	" people?"

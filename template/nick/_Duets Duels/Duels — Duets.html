@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!--
+
+Duels — Duets
+copyright (c) 2013 Stephanie Strickland & Nick Montfort
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. -->
+<style type="text/css">
+/* <![CDATA[ */
+body {
+ background: #c7dcfe;
+ color: #008;
+ margin: 24pt;
+ font-size: 13pt;
+ font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+div {
+ margin-bottom: 13pt;
+ font-family: monospace;
+}
+h1 {
+ font-size: 20pt;
+ margin-bottom: 0;
+}
+a {
+ color: #fff;
+ text-decoration: none;
+}
+#main {
+ font-family: serif;
+}
+/* ]]> */
+</style>
+<script type="text/javascript">
+var n = 1;
+function rand_range(maximum) {
+    "use strict";
+    return Math.floor(Math.random() * (maximum + 1));
+}
+function choose(array) {
+    "use strict";
+    return array[rand_range(array.length - 1)];
+}
+function stanza() {
+    "use strict";
+    var place = choose(['over email', 'at a coffeehouse', 'on a wiki',
+            'inside a studio', 'outside a library', 'in an art colony',
+            'in a hacker space', 'at a demoparty', 'at a conference',
+            'at a festival', 'on the street', 'in a food court']),
+        object = choose(['', 'computational ']) + choose(['visual text',
+            'work involving randomness', 'gathering of lexicons',
+            'letterpress poem', 'poetic series', 'translation',
+            'contribution to the commons', 'self-erasing text']),
+        activity = choose(['an argument', 'a negotiation',
+            'a conversation', 'an agreement', 'a disagreement',
+            'a miscommunication', 'a pitched battle']),
+        traits = choose(['focus', 'pacing', 'rationale', 'extent',
+            'mood', 'techniques', 'format', 'accessibility', 'poetics',
+            'boundary conditions', 'trajectory', 'typography', 'scale',
+            'framing', 'politics', 'tempo', 'title']),
+        result = ['compromise', 'new structures', 'mutual appreciation',
+            'further exploration', 'false starts', 'missed deadlines',
+            'running out of time', 'rethinking the project', 'dismay',
+            'a return to the drawing board', 'a different hypothesis',
+            'a threat to quit', 'laughter'],
+        main = document.getElementById('main'),
+        last = document.createElement('div'),
+        first,
+        second;
+    first = choose(result);
+    result.splice(result.indexOf(first, 1));
+    second = choose(result);
+    last.innerHTML = activity + " " + place +
+        '<br />&nbsp; on a ' + object +
+        "<br />&nbsp;&nbsp;&nbsp; involving " + activity +
+        " about the work's " + traits +
+        '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resulting in ' + first +
+        ' and ' + second;
+    main.appendChild(last);
+    n = n + 1;
+    if (n < 34) {
+        stanza();
+    }
+}
+</script>
+  <title>Duels &mdash; Duets</title>
+</head>
+<body onload="stanza();">
+<div id="main">
+</div>
+</body>
+</html>

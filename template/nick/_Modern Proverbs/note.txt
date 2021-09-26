@@ -1,0 +1,32 @@
+// two part verse
+sounding like a proverb
+
+left:
+	"It’s five o’clock."
+	"There’s a party —."
+	"All roads lead."
+	"Welcome!"
+	"Keep your data."
+	"The road goes."
+	"The sun never sets."
+	"There’s no place like…"
+	"Can one simply walk?"
+	"No man is."
+	"Right or wrong,."
+	"Tell it."
+	"The Internet is."
+
+right:
+	"somewhere"
+	"in my pants"
+	"to Rome"
+	"to the jungle"
+	"in the Cloud"
+	"ever ever on"
+	"on the British Empire"
+	"home"
+	"into Mordor"
+	"an island"
+	"my country"
+	"to the hand"
+	"a series of tubes"
