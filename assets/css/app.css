@@ -10,23 +10,18 @@ body {
 @keyframes color-repeater {
 	0% {
 		background: hsl(142, 59%, 90%);
-		/* background: linear-gradient(hsl(142, 59%, 90%), hsl(45, 98%, 88%)); */
 	}
 	25% {
 		background: hsl(45, 98%, 88%);
-		/* background: linear-gradient(hsl(45, 98%, 88%), hsl(142, 59%, 90%)); */
 	}
 	50% {
 		background: hsl(4, 83%, 90%);
-		/* background: linear-gradient(hsl(4, 83%, 90%), hsl(217, 88%, 88%)); */
 	}
 	75% {
 		background: hsl(217, 88%, 88%);
-		/* background: linear-gradient(hsl(217, 88%, 88%), hsl(4, 83%, 90%)); */
 	}
 	100% {
 		background: hsl(142, 59%, 87%);
-		/* background: linear-gradient(hsl(45, 98%, 88%), hsl(217, 88%, 88%)); */
 	}
 }
 
@@ -47,7 +42,7 @@ body {
 }
 
 .bug.a {
-	top: 100px;
+	top: -100px;
 	right: 100px;
 	width: 150px;
 	height: auto;
@@ -58,7 +53,7 @@ body {
 .bug.b {
 	width: 35px;
 	height: auto;
-	top: 10px;
+	top: -10px;
 	left: 10px;
 	background-blend-mode: multiply;
 	animation: spin 18s ease infinite;
@@ -66,7 +61,7 @@ body {
 .bug.c {
 	width: 35px;
 	height: auto;
-	bottom: 200px;
+	bottom: -200px;
 	left: 100px;
 	background-blend-mode: multiply;
 	animation: spin 10s ease infinite;
@@ -74,7 +69,7 @@ body {
 
 .bug.d {
 	top: 35px;
-	left: 100px;
+	left: -100px;
 	width: 40px;
 	height: auto;
 	blend-mode: multiply;
@@ -86,7 +81,7 @@ body {
 	width: 35px;
 	height: auto;
 	top: 10px;
-	right: 10px;
+	right: -10px;
 	background-blend-mode: multiply;
 	animation: spin 50s ease infinite;
 }
@@ -94,7 +89,7 @@ body {
 	width: 35px;
 	height: auto;
 	top: 200px;
-	right: 100px;
+	right: -100px;
 	blend-mode: multiply;
 	background-blend-mode: multiply;
 	background-blend-mode: multiply;
@@ -104,7 +99,7 @@ body {
 .bug.g {
 	width: 35px;
 	height: auto;
-	bottom: 50px;
+	bottom: -50px;
 	left: 100px;
 	background-blend-mode: multiply;
 	animation: spin 120s ease infinite;
