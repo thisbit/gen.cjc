@@ -242,3 +242,45 @@ body {
 .line {
 	font-size: 1.2em;
 }
+
+/***********************************************************
+** Here we attatch segements from stations to CJC content **
+***********************************************************/
+
+/* marika */
+
+.line:nth-of-type(3):after {
+	width: 95px;
+	height: 250px;
+	margin: 1em 1em 1em 0;
+	float: left;
+	content: "";
+	display: block;
+	background-image: url("../images/marika-knot.webp");
+	background-repeat: no-repeat;
+	overflow: visible;
+}
+
+.line:nth-of-type(8):after {
+	width: 95px;
+	height: auto;
+	margin: 1em 0 1em 01em;
+	padding: 1em;
+	float: right;
+	content: "Sorry, this seat is reserved";
+	display: block;
+	border: 2px dotted #000;
+}
+
+/* Dakota */
+
+.line:nth-of-type(16):after {
+	font-size: 2em;
+	text-transform: uppercase;
+	margin: 1em 0;
+	padding: 1em;
+	content: "bzzzzzzzz__________zzzzzbzzzzzbzzzzzzzzzzzz_________";
+	display: block;
+	border: 2px dotted #000;
+	word-break: break-all;
+}
