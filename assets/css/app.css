@@ -61,7 +61,7 @@ body {
 	overflow-y: hidden;
 }
 
-.app-header {
+.app-heading-wrap {
 	text-transform: uppercase;
 	line-height: 1;
 	font-weight: 900;
@@ -70,16 +70,27 @@ body {
 	white-space: nowrap;
 	overflow: hidden;
 	position: fixed;
-	top: 0;
 	z-index: 3;
+}
+
+.app-heading-wrap.first-part {
+	top: 0;
 	transform: translateX(-10vw) translateY(10vh) rotate(-23deg);
+}
+
+.app-heading-wrap.second-part {
+	top: 35%;
+	transform: translateX(-10vw) translateY(10vh) rotate(15deg);
+}
+
+.app-heading-wrap.third-part {
+	top: 75%;
 }
 
 .app-heading {
 	font-size: 8vh;
 	display: inline-block;
 	padding-left: 100%;
-	animation: marquee 50s linear infinite;
 	text-transform: uppercase;
 	margin-block-end: 0;
 	margin-block-start: 0;
@@ -88,6 +99,8 @@ body {
 	color: #fff;
 	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
 		2px 2px 0 #000;
+	letter-spacing: 0.12em;
+	word-spacing: 0.2em;
 }
 
 @supports ((text-stroke: 2px black) or (-webkit-text-stroke: 2px black)) {
@@ -99,7 +112,39 @@ body {
 	}
 }
 
-@keyframes marquee {
+.app-heading.top-right {
+	animation: marquee-first 8s linear;
+}
+
+.app-heading.mid-left {
+	animation: marquee-second 8s linear;
+	animation-delay: 5s;
+}
+
+.app-heading.bottom-right {
+	animation: marquee-third 8s linear;
+	animation-delay: 9s;
+}
+
+@keyframes marquee-first {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-100%, 0);
+	}
+}
+
+@keyframes marquee-second {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-100%, 0);
+	}
+}
+
+@keyframes marquee-third {
 	0% {
 		transform: translate(0, 0);
 	}
