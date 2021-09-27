@@ -1,9 +1,35 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: linear-gradient(to bottom right, lime, lightblue) 50% 50% / 100%
-		100% no-repeat;
+	animation: color-repeater 30s linear infinite;
+	/* background: linear-gradient(to bottom right, lime, lightblue) 50% 50% / 100% 
+		100% no-repeat; */
+	overflow: hidden;
 }
+
+@keyframes color-repeater {
+	0% {
+		background: hsl(142, 59%, 90%);
+		/* background: linear-gradient(hsl(142, 59%, 90%), hsl(45, 98%, 88%)); */
+	}
+	25% {
+		background: hsl(45, 98%, 88%);
+		/* background: linear-gradient(hsl(45, 98%, 88%), hsl(142, 59%, 90%)); */
+	}
+	50% {
+		background: hsl(4, 83%, 90%);
+		/* background: linear-gradient(hsl(4, 83%, 90%), hsl(217, 88%, 88%)); */
+	}
+	75% {
+		background: hsl(217, 88%, 88%);
+		/* background: linear-gradient(hsl(217, 88%, 88%), hsl(4, 83%, 90%)); */
+	}
+	100% {
+		background: hsl(142, 59%, 87%);
+		/* background: linear-gradient(hsl(45, 98%, 88%), hsl(217, 88%, 88%)); */
+	}
+}
+
 .bug-playground {
 	height: 100vh;
 	width: 100vw;
@@ -12,31 +38,87 @@ body {
 
 .bug {
 	position: fixed;
-	width: 50px;
-	height: 50px;
-	border-radius: 25px;
+	blend-mode: multiply;
+	background-blend-mode: multiply;
+}
+
+.bug {
+	animation: random(-5, 5) deg infinite linear;
 }
 
 .bug.a {
-	background-color: red;
 	top: 100px;
 	right: 100px;
+	width: 150px;
+	height: auto;
+	animation: spin 60s infinite;
+	blend-mode: multiply;
+	background-blend-mode: multiply;
 }
 .bug.b {
-	background-color: blue;
+	width: 35px;
+	height: auto;
 	top: 10px;
 	left: 10px;
+	background-blend-mode: multiply;
+	animation: spin 18s ease infinite;
 }
 .bug.c {
-	background-color: green;
+	width: 35px;
+	height: auto;
 	bottom: 200px;
 	left: 100px;
+	background-blend-mode: multiply;
+	animation: spin 10s ease infinite;
 }
 
 .bug.d {
-	background-color: black;
-	top: 50px;
+	top: 35px;
 	left: 100px;
+	width: 40px;
+	height: auto;
+	blend-mode: multiply;
+	background-blend-mode: multiply;
+	animation: spin 30s ease infinite;
+}
+
+.bug.e {
+	width: 35px;
+	height: auto;
+	top: 10px;
+	right: 10px;
+	background-blend-mode: multiply;
+	animation: spin 50s ease infinite;
+}
+.bug.f {
+	width: 35px;
+	height: auto;
+	top: 200px;
+	right: 100px;
+	blend-mode: multiply;
+	background-blend-mode: multiply;
+	background-blend-mode: multiply;
+	animation: spin 40s ease infinite;
+}
+
+.bug.g {
+	width: 35px;
+	height: auto;
+	bottom: 50px;
+	left: 100px;
+	background-blend-mode: multiply;
+	animation: spin 120s ease infinite;
+}
+
+@-webkit-keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 /* .app-header {
@@ -58,7 +140,7 @@ body {
 }
 .app {
 	font-family: Arial, "inter";
-	overflow-y: hidden;
+	overflow: hidden;
 }
 
 .app-heading-wrap {
