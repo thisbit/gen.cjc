@@ -4,6 +4,7 @@ body {
 	animation: color-repeater 30s linear infinite;
 	overflow: hidden;
 	font-family: Arial, "inter";
+	box-sizing: border-box;
 }
 
 @keyframes color-repeater {
@@ -240,47 +241,24 @@ body {
 .line {
 	font-size: 1.2em;
 }
-
-/***********************************************************
-** Here we attatch segements from stations to CJC content **
-***********************************************************/
-
-/* marika */
-
-.line:nth-of-type(3):after {
-	width: 95px;
-	height: 250px;
-	margin: 1em 1em 1em 0;
-	float: left;
-	content: "";
-	display: block;
-	background-image: url("../images/marika-knot.webp");
-	background-repeat: no-repeat;
-	overflow: visible;
+.poem--heading {
+	font-weight: normal;
+	font-size: 1.6em;
 }
-
-.line:nth-of-type(8):after {
-	width: 95px;
-	height: auto;
-	margin: 1em 0 1em 01em;
-	padding: 1em;
-	float: right;
-	content: "Sorry, this seat is reserved";
-	display: block;
-	border: 2px dotted #000;
-}
-
-/* Dakota */
-
-.line:nth-of-type(16):after {
-	font-size: 2em;
-	text-transform: uppercase;
-	margin: 1em 0;
-	padding: 1em;
-	content: "bzzzzzzzz__________zzzzzbzzzzzbzzzzzzzzzzzz_________";
-	display: block;
-	border: 2px dotted #000;
-	word-break: break-all;
+.poem--chapter-separator {
+	width: 6ch;
+	font-weight: normal;
+	font-size: 2.6em;
+	text-align: center;
+	margin: 0 auto 3em;
+	color: transparent;
+	text-decoration-style: wavy;
+	text-decoration-color: #000;
+	text-decoration-line: underline;
+	text-decoration-thickness: 4px;
+	padding-bottom: 10px;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 /*///////////////////////////////////////////////////////////
@@ -380,3 +358,46 @@ body {
 		margin-left: 2em;
 	}
 }
+
+/***********************************************************
+** Here we attatch segements from stations to CJC content **
+***********************************************************/
+
+/* Csilla */
+
+.line:nth-of-type(22n + 5):after {
+	width: 95px;
+	height: auto;
+	margin: 1em 0 1em 01em;
+	padding: 1em;
+	float: right;
+	content: "Sorry, this seat is reserved";
+	display: block;
+	border: 2px dotted #000;
+}
+
+/* marika */
+/* .line:nth-of-type(3):after {
+	width: 95px;
+	height: 250px;
+	margin: 1em 1em 1em 0;
+	float: left;
+	content: "";
+	display: block;
+	background-image: url("../images/marika-knot.webp");
+	background-repeat: no-repeat;
+	overflow: visible;
+} */
+
+/* Dakota */
+
+/* .line:nth-of-type(16):after {
+	font-size: 2em;
+	text-transform: uppercase;
+	margin: 1em 0;
+	padding: 1em;
+	content: "bzzzzzzzz__________zzzzzbzzzzzbzzzzzzzzzzzz_________";
+	display: block;
+	border: 2px dotted #000;
+	word-break: break-all;
+} */
