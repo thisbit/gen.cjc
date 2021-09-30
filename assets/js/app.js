@@ -71,7 +71,7 @@
 	function litany() {
 			"use strict";
 			var last, text, l, r, main = document.getElementById('poem');
-			if (t <= 9999) {
+			if (t <= 50) {
 					t += 1;
 			} else {
 					main.removeChild(document.getElementById('poem').firstChild);
