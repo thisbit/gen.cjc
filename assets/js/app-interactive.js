@@ -129,7 +129,7 @@
 	(function produce_litany() {
 			"use strict";
 			litany();
-			setInterval(litany, 3500);
+			setInterval(litany, 1500);
 	})();
 })();
 
