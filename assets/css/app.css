@@ -2,9 +2,8 @@ body {
 	margin: 0;
 	padding: 0;
 	animation: color-repeater 30s linear infinite;
-	/* background: linear-gradient(to bottom right, lime, lightblue) 50% 50% / 100% 
-		100% no-repeat; */
 	overflow: hidden;
+	font-family: Arial, "inter";
 }
 
 @keyframes color-repeater {
@@ -134,7 +133,6 @@ body {
 		url("../fonts/inter.svg#inter") format("svg");
 }
 .app {
-	font-family: Arial, "inter";
 	overflow: hidden;
 }
 
@@ -283,4 +281,102 @@ body {
 	display: block;
 	border: 2px dotted #000;
 	word-break: break-all;
+}
+
+/*///////////////////////////////////////////////////////////
+//////////////// about section and toggle ///////////////////
+///////////////////////////////////////////////////////////*/
+
+.colophon {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 9;
+}
+
+.visual--caption {
+	font-size: 0.8em;
+	margin: 0.75em 0 1.5em;
+}
+.colophon--toggle {
+	background: transparent;
+	font-size: 1em;
+	padding: 0.5em 1em;
+	margin: 0.5em 1em;
+	border-radius: 1.5em;
+	border: 2px solid currentColor;
+	z-index: 9999;
+	position: absolute;
+	bottom: 0.5em;
+	right: 0.5em;
+	cursor: pointer;
+	color: #000;
+	font-weight: 600;
+}
+.colophon--toggle.toggled {
+	color: whitesmoke;
+	background: rgb(29, 1, 23);
+}
+
+.colophon--about {
+	display: none;
+	background-color: rgb(29, 1, 23);
+	color: whitesmoke;
+	line-height: 1.4;
+	z-index: 10;
+	position: inherit;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	padding: 1em;
+	overflow-y: auto;
+}
+.project-heading-again {
+	margin-top: 0;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+
+.subsub-title {
+	margin: 1.2em 0;
+}
+.who {
+	margin-top: 0;
+}
+.colophon--about.open {
+	display: block;
+}
+
+.project-visual {
+	margin: 0;
+	max-width: 100%;
+}
+
+.actual-image {
+	max-width: 100%;
+}
+
+@media screen and (min-width: 720px) {
+	.project-heading-again.main-one {
+		min-height: 3em;
+	}
+
+	.project-heading-again.sub {
+		margin-top: 4em;
+	}
+	.colophon-what {
+		display: flex;
+		margin: auto;
+		max-width: 1920px;
+	}
+	.colophon-what > * {
+		flex: 1;
+	}
+
+	.coophon--content {
+		margin-left: 2em;
+	}
 }
