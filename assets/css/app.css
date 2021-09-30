@@ -2,9 +2,15 @@ body {
 	margin: 0;
 	padding: 0;
 	animation: color-repeater 30s linear infinite;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
 	font-family: Arial, sans-serif;
 	box-sizing: border-box;
+}
+
+body.interactive {
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 @keyframes color-repeater {
@@ -28,6 +34,13 @@ body {
 .bug-playground {
 	height: 100vh;
 	width: 100vw;
+	position: relative;
+	z-index: 9;
+}
+
+.interactive .bug-playground {
+	position: unset;
+	z-index: unset;
 }
 
 .bug {
@@ -116,7 +129,13 @@ body {
 }
 
 .app {
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.interactive .app {
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .app-heading-wrap {
@@ -220,6 +239,11 @@ body {
 	bottom: 0;
 }
 
+.interactive .poem {
+	position: static;
+	bottom: unset;
+}
+
 .line {
 	font-size: 1.2em;
 }
@@ -315,6 +339,7 @@ body {
 	bottom: 0;
 	right: 0;
 	z-index: 9;
+	width: 100%;
 }
 
 .visual--caption {
@@ -336,6 +361,12 @@ body {
 	color: #000;
 	font-weight: 600;
 }
+
+.colophon--toggle.app-style {
+	left: 0;
+	z-index: 99999;
+}
+
 .colophon--toggle.toggled {
 	color: whitesmoke;
 	background: rgb(29, 1, 23);
@@ -402,4 +433,11 @@ body {
 	.coophon--content {
 		margin-left: 2em;
 	}
+}
+
+a {
+	color: thistle;
+	text-decoration-style: wavy;
+	margin-bottom: 0.35em;
+	text-decoration-line: underline;
 }

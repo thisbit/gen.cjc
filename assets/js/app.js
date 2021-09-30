@@ -180,3 +180,21 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // Do the toggling.
   toggle(buttons);
 });
+
+
+const styleSwitch = document.querySelector(".app-style");
+
+	
+styleSwitch.addEventListener("click", (event) => {
+	event.preventDefault();
+	const active = document.querySelector(".toggled");
+	if (active) {
+		event.currentTarget.innerText = 'scroll';
+		active.classList.remove("toggled");
+		document.querySelector('body').classList.remove("interactive");
+	} else {
+		event.currentTarget.innerText = 'watch';
+		event.currentTarget.classList.add("toggled");
+		document.querySelector('body').classList.add("interactive");
+	}
+});
