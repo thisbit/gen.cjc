@@ -247,6 +247,69 @@ body {
 	white-space: nowrap;
 }
 
+/***********************************************************
+** Here we attatch segements from stations to CJC content **
+***********************************************************/
+
+/*//////////////////// Csilla //////////////////////
+//// Start from 9 and attatch to every 22 verse ////
+//////////////////////////////////////////////////*/
+
+.line:nth-of-type(22n + 9):after {
+	width: 37%;
+	max-width: 250px;
+	height: auto;
+	margin: 1em 0 1em 01em;
+	padding: 1em;
+	float: right;
+	content: "Sorry, this seat is reserved";
+	display: block;
+	border: 2px dotted #000;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/*//////////////////// Marika //////////////////////
+//// Start from 0 and attatch to every 22 verse ////
+//////////////////////////////////////////////////*/
+
+.line:nth-of-type(22n):after {
+	font-size: 0.8em;
+	height: 250px;
+	width: 50%;
+	max-width: 800px;
+	margin: 4em auto;
+	padding-left: 115px;
+	content: "Sometimes we catch things that don’t support us\2009\2014\2009 don’t feed us. And sometimes what we need slips through the holes in between the tangled knots we tied.";
+	display: flex;
+	align-items: center;
+	background-image: url("../images/marika-knot.webp");
+	background-repeat: no-repeat;
+	overflow: visible;
+}
+
+/*//////////////////// Dakota ///////////////////////
+//// Start from 13 and attatch to every 22 verse ////
+///////////////////////////////////////////////////*/
+
+.line:nth-of-type(22n + 13):after {
+	font-size: 1.34em;
+	text-transform: uppercase;
+	margin: 2em 0;
+	content: "bzzzzzzzz__________zzzzzbzzzzzbzzzzzzzzzzzz_________bzzzzzzz";
+	display: block;
+	/* word-break: keep-all; */
+	word-break: break-all;
+	overflow-x: hidden;
+}
+
+@media screen and (min-width: 720px) {
+	.line:nth-of-type(22n + 13):after {
+		font-size: 1.67em;
+		word-break: keep-all;
+	}
+}
+
 /*///////////////////////////////////////////////////////////
 //////////////// about section and toggle ///////////////////
 ///////////////////////////////////////////////////////////*/
@@ -342,68 +405,5 @@ body {
 
 	.coophon--content {
 		margin-left: 2em;
-	}
-}
-
-/***********************************************************
-** Here we attatch segements from stations to CJC content **
-***********************************************************/
-
-/*//////////////////// Csilla //////////////////////
-//// Start from 9 and attatch to every 22 verse ////
-//////////////////////////////////////////////////*/
-
-.line:nth-of-type(22n + 9):after {
-	width: 37%;
-	max-width: 250px;
-	height: auto;
-	margin: 1em 0 1em 01em;
-	padding: 1em;
-	float: right;
-	content: "Sorry, this seat is reserved";
-	display: block;
-	border: 2px dotted #000;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-
-/*//////////////////// Marika //////////////////////
-//// Start from 0 and attatch to every 22 verse ////
-//////////////////////////////////////////////////*/
-
-.line:nth-of-type(22n):after {
-	font-size: 0.8em;
-	height: 250px;
-	width: 50%;
-	max-width: 800px;
-	margin: 4em auto;
-	padding-left: 115px;
-	content: "Sometimes we catch things that don’t support us\2009\2014\2009 don’t feed us. And sometimes what we need slips through the holes in between the tangled knots we tied.";
-	display: flex;
-	align-items: center;
-	background-image: url("../images/marika-knot.webp");
-	background-repeat: no-repeat;
-	overflow: visible;
-}
-
-/*//////////////////// Dakota ///////////////////////
-//// Start from 13 and attatch to every 22 verse ////
-///////////////////////////////////////////////////*/
-
-.line:nth-of-type(22n + 13):after {
-	font-size: 1.34em;
-	text-transform: uppercase;
-	margin: 2em 0;
-	content: "bzzzzzzzz__________zzzzzbzzzzzbzzzzzzzzzzzz_________bzzzzzzz";
-	display: block;
-	/* word-break: keep-all; */
-	word-break: break-all;
-	overflow-x: hidden;
-}
-
-@media screen and (min-width: 720px) {
-	.line:nth-of-type(22n + 13):after {
-		font-size: 1.67em;
-		word-break: keep-all;
 	}
 }
