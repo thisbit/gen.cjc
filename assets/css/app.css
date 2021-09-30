@@ -352,19 +352,25 @@ body.interactive {
 	padding: 0.5em 1em;
 	margin: 0.5em 1em;
 	border-radius: 1.5em;
-	border: 2px solid currentColor;
+	border: 3px solid currentColor;
 	z-index: 9999;
 	position: absolute;
 	bottom: 0.5em;
 	right: 0.5em;
 	cursor: pointer;
-	color: #000;
+	color: rgb(77, 2, 60);
 	font-weight: 600;
 }
 
 .colophon--toggle.app-style {
 	left: 0;
-	z-index: 99999;
+	right: unset;
+	z-index: 8;
+}
+
+.colophon--toggle.toggled.app-style {
+	color: unset;
+	background: unset;
 }
 
 .colophon--toggle.toggled {
