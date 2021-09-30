@@ -71,7 +71,7 @@
 	function litany() {
 			"use strict";
 			var last, text, l, r, main = document.getElementById('poem');
-			if (t <= 50) {
+			if (t <= 800) {
 					t += 1;
 			} else {
 					main.removeChild(document.getElementById('poem').firstChild);
@@ -94,6 +94,22 @@
 			setInterval(litany, 1500);
 	})();
 })();
+
+// Failsafe clear DOM + add chapter title so it is understood as a lone poem not new one
+window.setInterval('newChapter()', 120000); // 1 minute in miliseconds
+
+const poem = document.querySelector('.poem');
+// const chapterContent = document.createTextNode("&sect;");
+const chapterSeparator = document.createElement('div');
+chapterSeparator.innerHTML = ' ----------- ';
+chapterSeparator.classList.add('poem--chapter-separator');
+// chapterSeparator.appendChild(chapterContent); 
+
+function newChapter() {
+		// window.location.newChapter();
+		poem.querySelectorAll('*').forEach(n => n.remove()); // remove poem lines
+		poem.appendChild(chapterSeparator); // add chapter title then continue writing
+}
 
 // Toggle Button for about section
 window.addEventListener("DOMContentLoaded", (event) => {
