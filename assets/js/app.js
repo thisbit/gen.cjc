@@ -95,3 +95,34 @@
 	})();
 })();
 
+// Toggle Button for about section
+window.addEventListener("DOMContentLoaded", (event) => {
+  // target all the trigers and store them as array.
+  const buttons = Array.from(document.querySelectorAll(".click-me"));
+
+  // Handle the state changes.
+  function toggle(triggers) {
+    const handleClick = (event) => {
+      event.preventDefault();
+      const active = document.querySelector(".toggled");
+      if (active) {
+        event.currentTarget.innerText = 'about';
+        active.classList.remove("toggled");
+        active.nextElementSibling.classList.remove("open");
+      } else {
+        event.currentTarget.innerText = 'close';
+        event.currentTarget.classList.add("toggled");
+        event.currentTarget.nextElementSibling.classList.add("open");
+      }
+    };
+
+    // Run the function on select elements.
+    const clicker = buttons.forEach((element) => {
+      element.addEventListener("click", handleClick, false);
+    });
+
+    return clicker;
+  }
+  // Do the toggling.
+  toggle(buttons);
+});
