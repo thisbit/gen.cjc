@@ -180,11 +180,11 @@ styleSwitch.addEventListener("click", (event) => {
 	event.preventDefault();
 	const active = document.querySelector(".toggled");
 	if (active) {
-		event.currentTarget.innerText = 'scroll';
+		event.currentTarget.innerText = "\uD83D\uDC9C scroll?";
 		active.classList.remove("toggled");
 		document.querySelector('body').classList.remove("interactive");
 	} else {
-		event.currentTarget.innerText = 'watch';
+		event.currentTarget.innerText = '\uD83D\uDC9C watch?';
 		event.currentTarget.classList.add("toggled");
 		document.querySelector('body').classList.add("interactive");
 	}
