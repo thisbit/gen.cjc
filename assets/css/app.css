@@ -237,6 +237,7 @@ body.interactive {
 	position: absolute;
 	width: calc(100vw - 2em);
 	bottom: 0;
+	padding-bottom: 3em;
 }
 
 .interactive .poem {
@@ -398,6 +399,10 @@ body.interactive {
 	font-weight: 300;
 	text-transform: uppercase;
 	font-size: 1em;
+}
+
+.colophon-who {
+	padding-bottom: 4em;
 }
 
 .subsub-title {
