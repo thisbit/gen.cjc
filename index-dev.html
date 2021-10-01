@@ -19,8 +19,8 @@
 </head>
 <body id="gradient">
 	<main class="app">
-		<section class="app-conent">
-			<article class="poem" id="poem">
+		<section class="app-conent" role="main">
+			<article class="poem" id="poem" role="region" aria-labelledby="poem-toggle" aria-live="polite" aria-atomic="false" >
 				<div class="poem--chapter-separator"> ----------- </div>
 			</article>
 		</section>
@@ -33,7 +33,7 @@
 			<img class="bug f" src="assets/images/brown-moth.webp" alt="Image of the brown moth"/>
 			<img class="bug g" src="assets/images/red-bug.webp" alt="Image of red bug"/>
 		</section>
-		<header class="app-header">
+		<header class="app-header" role="banner">
 			<div class="app-heading-wrap first-part">
 				<h1 class="app-heading top-right">withering worms wander</h1>
 			</div>
@@ -46,9 +46,9 @@
 		</header>
 	</main>
 	<footer class="colophon">
-		<button class="colophon--toggle app-style">&#128156; scroll?</button>
-		<button class="colophon--toggle click-me">about</button>
-		<section class="colophon--about">
+		<button class="colophon--toggle app-style" aria-controls="poem" aria-pressed="false" aria-haspopup="false" id="poem-toggle" >&#128156; scroll?</button>
+		<button class="colophon--toggle click-me" aria-controls="about-project" aria-expanded="false" aria-haspopup="true" id="about-toggle">about</button>
+		<section class="colophon--about" id="about-project" role="region" aria-labelledby="about-toggle">
 			<article class="colophon-what">
 				<header class="summit-casco">
 					<h3 class="project-heading-again main-one">
@@ -80,7 +80,7 @@
 					<footer class="colophon-who">
 						<h5 class="subsub-title project-heading-again">Who's Who?</h5>
 						<p class="who">
-							This project has been realised as part of <a href="https://dutchartinstitute.eu/page/15445/2020-2021-study-group-~-reframing-climate-colonialism-pleasuring-the" target="_blank" title="Find out more about the project, the Course and the participating students and tutors." >CASCO COOP course</a>, held at Dutch Art Institute 2020-2021.
+							This project has been realised as part of <a href="https://dutchartinstitute.eu/page/15445/2020-2021-study-group-~-reframing-climate-colonialism-pleasuring-the" target="_blank" rel="noreferrer noopener" title="Find out more about the project, the Course and the participating students and tutors." >CASCO COOP course</a>, held at Dutch Art Institute 2020-2021.
 						</p>
 						<p class="who">
 							Tutors: Ama Josephine Budge(discontinued), Clementine Edwards, Ying Que, CJC Working Group for Casco Art Institute: Working for the Commons	
@@ -98,5 +98,5 @@
 	</footer>
 </body>
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' id='cjc-jquery'></script>
-<script type='text/javascript' src='assets/js/app-min.js' id='cjc-global-js'></script>
+<script type='text/javascript' src='assets/js/app.js' id='cjc-global-js'></script>
 </html>

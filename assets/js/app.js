@@ -151,6 +151,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       event.preventDefault();
       const active = document.querySelector(".toggled");
       if (active) {
+				event.currentTarget.setAttribute("aria-expanded",'false');
         event.currentTarget.innerText = 'about';
         active.classList.remove("toggled");
         active.nextElementSibling.classList.remove("open");
@@ -158,6 +159,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         event.currentTarget.innerText = 'close';
         event.currentTarget.classList.add("toggled");
         event.currentTarget.nextElementSibling.classList.add("open");
+				event.currentTarget.setAttribute("aria-expanded",'true');
       }
     };
 
@@ -182,8 +184,10 @@ styleSwitch.addEventListener("click", (event) => {
 	if (active) {
 		event.currentTarget.innerText = "\uD83D\uDC9C scroll?";
 		active.classList.remove("toggled");
+		event.currentTarget.setAttribute("aria-pressed",'false');
 		document.querySelector('body').classList.remove("interactive");
 	} else {
+		event.currentTarget.setAttribute("aria-pressed",'true');
 		event.currentTarget.innerText = '\uD83D\uDC9C watch?';
 		event.currentTarget.classList.add("toggled");
 		document.querySelector('body').classList.add("interactive");
