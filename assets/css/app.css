@@ -324,6 +324,10 @@ body.interactive {
 	align-items: center;
 
 	background-image: url("../images/marika-knot.png");
+	background-image: -webkit-image-set(
+		url("../images/marika-knot.webp") type("image/webp"),
+		url("../images/marika-knot.png") type("image/png")
+	);
 	background-image: image-set(
 		url("../images/marika-knot.webp") type("image/webp"),
 		url("../images/marika-knot.png") type("image/png")
