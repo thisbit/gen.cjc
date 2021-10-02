@@ -245,6 +245,19 @@ body.interactive {
 	bottom: unset;
 }
 
+@media screen and (min-width: 800px) {
+	.poem {
+		max-width: 720px;
+		left: 50%;
+		margin-left: -360px;
+	}
+	.interactive .poem {
+		left: unset;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 .line {
 	font-size: 1.2em;
 }
@@ -350,7 +363,7 @@ body.interactive {
 	background: transparent;
 	font-size: 1em;
 	padding: 0.5em 1em;
-	margin: 0.5em 1em;
+	margin: 0.5em;
 	border-radius: 1.5em;
 	border: 3px solid currentColor;
 	z-index: 9999;
@@ -360,6 +373,19 @@ body.interactive {
 	cursor: pointer;
 	color: rgb(77, 2, 60);
 	font-weight: 600;
+}
+
+.colophon--toggle.app-style {
+	margin: 0.5em 1em;
+}
+
+@media screen and (min-width: 720px) {
+	.colophon--toggle {
+		margin: 1em 2em;
+	}
+	.colophon--toggle.app-style {
+		margin: 1em 2.5em;
+	}
 }
 
 .colophon--toggle.app-style {
@@ -393,6 +419,19 @@ body.interactive {
 	padding: 1em;
 	overflow-y: auto;
 }
+
+@media screen and (min-width: 720px) {
+	.colophon--about {
+		padding: 3em;
+	}
+}
+
+@media screen and (min-width: 820px) {
+	.summit-casco {
+		padding-bottom: 5em;
+	}
+}
+
 .project-heading-again {
 	margin-top: 0;
 	font-weight: 300;
@@ -441,7 +480,7 @@ body.interactive {
 	}
 
 	.coophon--content {
-		margin-left: 2em;
+		margin-left: 3em;
 	}
 }
 
