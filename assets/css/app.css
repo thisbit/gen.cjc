@@ -117,6 +117,11 @@ body.interactive {
 	animation: spin 120s ease infinite;
 }
 
+.bug,
+.bug * {
+	user-select: none;
+}
+
 @-webkit-keyframes spin {
 	100% {
 		transform: rotate(360deg);
@@ -317,7 +322,12 @@ body.interactive {
 	content: "Sometimes we catch things that don’t support us\2009\2014\2009 don’t feed us. And sometimes what we need slips through the holes in between the tangled knots we tied.";
 	display: flex;
 	align-items: center;
-	background-image: url("../images/marika-knot.webp");
+
+	background-image: url("../images/marika-knot.png");
+	background-image: image-set(
+		url("../images/marika-knot.webp") type("image/webp"),
+		url("../images/marika-knot.png") type("image/png")
+	);
 	background-repeat: no-repeat;
 	overflow: visible;
 }
