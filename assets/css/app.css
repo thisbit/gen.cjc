@@ -375,6 +375,13 @@ body.interactive {
 	font-weight: 600;
 }
 
+.colophon--toggle:hover,
+.colophon--toggle:focus {
+	background-color: rgb(77, 2, 60);
+	color: thistle;
+	border-color: rgb(77, 2, 60);
+}
+
 .colophon--toggle.app-style {
 	margin: 0.5em 1em;
 }
