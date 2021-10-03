@@ -388,6 +388,26 @@ body.interactive {
 	color: rgb(77, 2, 60);
 	font-weight: 600;
 }
+.download--wrap {
+	display: block;
+}
+.colophon--download {
+	background: transparent;
+	font-size: 1em;
+	padding: 0.5em 1em;
+	margin: 2em 1ch 2em 0;
+	border-radius: 1.5em;
+	border: 2px solid currentColor;
+	cursor: pointer;
+	color: thistle;
+	font-weight: 600;
+}
+
+.colophon--download:hover,
+.colophon--download:focus {
+	background-color: thistle;
+	color: rgb(77, 2, 60);
+}
 
 .colophon--toggle:hover,
 .colophon--toggle:focus {
