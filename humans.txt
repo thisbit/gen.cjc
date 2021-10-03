@@ -1,0 +1,14 @@
+/* SITE INFORMATION */
+
+	Site name:  Withering worms wander, wording worlding warning, weather winds wait
+	Site URL:   https://wwwwww.ooo/
+	Web design: abecede
+	About.me: https://abece.design/
+	Web development: abecede
+	About.me:   https://abece.design/
+	Github:	https://github.com/thisbit
+	Location:   HR (Croatia)
+	Built with: HTML, JS, CSS
+	Launched:   01. October 2021.
+	Last update: 03. October 2021.
+	Version: 1.0.1.
