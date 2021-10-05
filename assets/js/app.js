@@ -73,7 +73,13 @@
 		"Our staff and support teams,.",
 		"Our ethical practices,.",
 		"Our transparency and accountability practices,.",
-		"Our commitment to change,."
+		"Our commitment to change,.",
+		"This marks a significant period,.",
+		"The CJC positions climate justice,.",
+		"Of particular pertinence to this code,.",
+		"We live too with the increasingly inescapable knowledge,.",
+		"Climate Colonialism traces the direct lineage,.",
+		"A term that works from a deep rooted understanding of colonial violence and toward decolonial multi-species futures,."
 	];
 	var right = [
 		"it is circular",
@@ -93,7 +99,22 @@
 		"making space for a plurality of knowledges, practices, and approaches",
 		"the knowledge structures of modernity",
 		"being open to becoming smaller",
-		"our commitment to change"
+		"our commitment to change",
+		"direct lineage of climate change to European colonial occupation",
+		"across the Global South'",
+		"far-reaching atrocities that followed",
+		"forced extraction of natural resources from across the Global South",
+		"mass deforestation",
+		"dissolution and destabilization of sustainable indigenous farming, irrigation, and migration practices",
+		"oppressed indigenous people",
+		"using the labor of enslaved Africans",
+		"resources were then broken down",
+		"to power the industrial revolution",
+		"consumer-driven economic model that would go on to release high volumes of carbon emissions causing the Earth’s temperature to rise",
+		"effecting the mycelial networks of fungi",
+		"the acidity of soil, and the health of its bacteria",
+		"causing tsunamis, hurricanes, droughts",
+		"being worn away by fires"
 	];
 	function rand_range(max) {
 			"use strict";
