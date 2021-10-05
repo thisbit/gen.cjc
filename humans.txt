@@ -10,5 +10,5 @@
 	Location:   HR (Croatia)
 	Built with: HTML, JS, CSS
 	Launched:   01. October 2021.
-	Last update: 03. October 2021.
+	Last update: 05. October 2021.
 	Version: 1.0.1.
