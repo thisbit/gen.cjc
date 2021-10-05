@@ -391,6 +391,11 @@ body.interactive {
 .download--wrap {
 	display: block;
 }
+
+.download--label {
+	display: block;
+}
+
 .colophon--download {
 	background: transparent;
 	font-size: 1em;
